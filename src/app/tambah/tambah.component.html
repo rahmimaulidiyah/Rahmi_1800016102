@@ -1,0 +1,22 @@
+<h3 mat-dialog-title>Tambahkan Jadwal grup </h3>
+<div mat-dialog-content>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Nama Grup</mat-label>
+    <input matInput [(ngModel)]="data.nama_grup">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Tanggal</mat-label>
+    <input matInput [(ngModel)]="data.tanggal">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Waktu</mat-label>
+    <input matInput [(ngModel)]="data.waktu">
+  </mat-form-field>
+</div>
+<mat-dialog-actions>
+  <span class="spacer"></span>
+  <button mat-button mat-dialog-close>Batal</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="simpan(data)">Simpan</button>
+</mat-dialog-actions>
